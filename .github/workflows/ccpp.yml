@@ -6,12 +6,12 @@ jobs:
   build:
 
     runs-on: macos-latest
-    
+
     steps:
     - uses: actions/checkout@v1
     - name: configure
       run: cmake -Bbuild -G 'Unix Makefiles'
     - name: build
-      run: cmake --build build
+      run: cmake --build build -- VERBOSE=1
     - name: test
       run: cd build && ctest
