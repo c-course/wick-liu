@@ -6,7 +6,8 @@ enable_testing()
 
 add_executable(server server.cpp)
 add_executable(client client.cpp)
-add_test(test-demo1 demo1)
+add_test(test-demo1 server)
+add_test(test-demo2 client)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
